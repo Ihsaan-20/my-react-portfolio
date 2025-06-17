@@ -5,6 +5,8 @@ import img from './img.png'; // Confirm if it's .png in your project and update
 import splash from './splash.png'; // Confirm if it's .png in your project and update
 import { BsLinkedin, BsInstagram, BsGithub } from 'react-icons/bs';
 import { FaXTwitter } from 'react-icons/fa6'; // Import the new Twitter (X) icon
+// Import the new About component
+import About from './components/About';
 
 const Home = () => {
     const multiTextRef = useRef(null);
@@ -29,7 +31,7 @@ const Home = () => {
             <nav className="flex justify-between items-center h-20 px-4 md:px-10 z-50">
                 {/* Logo on the left */}
                 <div className="flex text-3xl md:text-4xl font-extrabold text-black tracking-wider cursor-pointer">
-                    devihsaan<span className="text-portfolio-orange">.</span>io
+                    <span className="text-portfolio-orange">Ihsaan Chandio</span>
                 </div>
 
                 {/* Social Links on the right */}
@@ -54,7 +56,7 @@ const Home = () => {
 
                 <div className="w-full md:w-1/2 z-10 p-4 md:p-0">
                     <span className="block relative text-3xl md:text-4xl tracking-widest text-black after:content-[''] after:absolute after:h-1 after:w-12 after:bottom-2.5 after:bg-portfolio-orange">Hello</span>
-                    <h1 className="block text-4xl md:text-5xl font-extrabold text-black mt-2">I'm a <span className="text-portfolio-orange capitalize" ref={multiTextRef}></span></h1>
+                    <h1 className="block text-4xl md:text-4xl font-extrabold text-black mt-2">I'm a <span className="text-portfolio-orange capitalize" ref={multiTextRef}></span></h1>
                     <p className="block w-full md:w-[90%] text-base md:text-xl text-black mt-4 mb-8">
                         I craft robust and engaging digital experiences. With a strong foundation in both frontend and backend technologies, I build scalable web applications from concept to deployment. Let's create something impactful together.
                     </p>
@@ -68,6 +70,10 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* About Section */} {/* Render the About component here */}
+            <About />
+            
             {/* Custom animations for circles */}
             <style jsx>{`
                 @keyframes object1 {
